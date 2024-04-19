@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 
 import MyComponent from './pages/changing';
-import { Header } from '@bosch/react-frok';
+
 import HMI from './pages/HMI';
 import Automated from './Redirecting/Automated';
 import MyPage from './Redirecting/MyPage';

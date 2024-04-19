@@ -1,7 +1,7 @@
 import React from 'react'
 import MyComponent from './changing'
 import { Tabs } from 'antd';
-import ThirdPage from '../Redirecting/ThirdPage';
+
 // import Box from '@mui/material/Box';
 // import "../pages/HMI.css"
 // import { Link } from 'react-router-dom';

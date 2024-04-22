@@ -1,7 +1,7 @@
 import React from 'react'
 import MyComponent from './changing'
 import { Tabs } from 'antd';
-
+import leap from "../assets/leap.pptx"
 // import Box from '@mui/material/Box';
 // import "../pages/HMI.css"
 // import { Link } from 'react-router-dom';
@@ -18,11 +18,12 @@ const onChange = (key) => {
         <div>
           
           <iframe 
-        src="https://www.slideshare.net/JustEngineering/what-is-hmi"
+          
+           src="src/assets/leap.pptx"
         width="100%" 
         height="569" 
         frameborder="0" 
-        allowfullscreen="true" 
+        allowFullScreen="true" 
         mozallowfullscreen="true" 
         webkitallowfullscreen="true"
       ></iframe>

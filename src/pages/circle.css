@@ -1,7 +1,10 @@
-.custom-card {
+.custom-card{
     width: 240px;
     
+
+    
   }
+  
   
   .custom-image{
     width: 100%;
@@ -12,12 +15,55 @@
         
       
   }
+  .custom-image:hover{
+    background-color: grey;
+  }
   
   .custom-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  .card-hover:hover{
+    background-color:#CDCDCD;
+  }
+  .card1-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card2-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card3-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card4-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card5-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card6-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card7-hover:hover{
+    background-color: #CDCDCD;
+  }
+  .card8-hover:hover{
+    background-color: #CDCDCD;
+  }
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+}
+
+/* Media query for screens with a minimum width of 1200px */
+@media (min-width: 1000px) {
+  body {
+    font-size: 18px; /* Increase font size for larger screens */
+  }
+}
   
   
   

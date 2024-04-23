@@ -11,6 +11,7 @@ import MyPage from './Redirecting/MyPage';
 import MyClass from './Redirecting/MyClass';
 import ThirdPage from './Redirecting/ThirdPage';
 import Login from './pages/Login';
+import Mypdf from './pages/Mypdf';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/secondpage" element={<MyClass/>} />
           <Route path="/thirdpage" element={<ThirdPage/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/leapx" element={<Mypdf/>} />
           <Route path="/" element={<Home/>} />
       
       </Routes>

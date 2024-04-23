@@ -27,7 +27,7 @@ const onChange = (key) => {
           
             <iframe 
           
-           src= "https://www.slideshare.net/JustEngineering/what-is-hmi"
+           src= {leapx}
         width="100%" 
         height="569" 
         frameborder="0" 
@@ -77,7 +77,7 @@ const onChange = (key) => {
 
     
   
-  const HMI = () => {
+  const Mypdf = () => {
     return (
         <div>
         
@@ -91,7 +91,5 @@ const onChange = (key) => {
     );
   };
   
-  export default HMI;
+  export default Mypdf;
 
-         
-   

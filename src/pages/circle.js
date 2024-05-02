@@ -92,7 +92,7 @@ const Homepage=()=>{
       </Card>
 
       <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
-       onClick={() => navigate("/Evoco")} className='card1-hover'>
+       onClick={() => navigate("/leapx")} className='card1-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={Hoverview} />
         </div>

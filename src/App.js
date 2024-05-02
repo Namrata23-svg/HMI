@@ -41,7 +41,7 @@ function App() {
           <Route path="/leapx" element={<Mypdf/>} />
           <Route path="/HmiAcc" element={<HmiAcc/>}/>
           <Route path="/SearchPage" element={<SearchPage/>}/>
-          <Route path="/evoco" element={<Evoco/>}/>
+          <Route path="/leapx" element={<Evoco/>}/>
           <Route path="/ridebuddy" element={<Ridebuddy/>}/>
           <Route path="/hmianalytics" element={<Hmianalytics/>}/>
           <Route path="/hmivisualization" element={<HmiVis/>}/>

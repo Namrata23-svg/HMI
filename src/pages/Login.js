@@ -1,4 +1,5 @@
 import React from 'react';
+import hmi from "../assets/hmi.png"
 
 // import { Button, Descriptions ,PageHeader } from 'antd';
 // import PageHeader from "antd"
@@ -13,6 +14,7 @@ import "../pages/Login.css"
 import { useNavigate } from 'react-router-dom';
 import log from "../assets/log.jpg"
 import Home from './Home';
+import Link from 'antd/es/typography/Link';
 
 const { Title, Text } = Typography;
 const Login = () => {
@@ -33,27 +35,35 @@ const Login = () => {
   };
   return (
     
-       
-    <div className="site-page-header-ghost-wrapper" >
-      <Card style={{paddingTop:"15px"}}
-      title={
-        <Space style={{ height: "50px", paddingLeft: "60px" }}>
-        <img src={bosl} style={{ height: "50px", marginTop: "5px" }} />
-        <Title level={4} style={{ margin: 0,paddingTop:"8px", color: "red", fontSize: "34px", height: "70px", width: "70px" }}><b>BOSCH</b></Title>
-      </Space>
-      }
-        extra={
-          <Space style={{paddingRight:"60px"}}>
-            <Button icon={<PhoneOutlined />} type="text">Contact</Button>
-            <Button icon={<MenuOutlined />} type="text">Menu</Button>
-            
-          </Space>
-        }
-      >
-         <div>
+    
+
+     <div>
+   
+    <div className="site-page-header-ghost-wrapper" style={{ margin: 0, padding: 0 }}>
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "15px 60px" }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <img src={bosl} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
+        <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
+      </div>
+      
+            <Space style={{paddingRight:"60px"}}>
+              
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Link>
+        <img src={hmi}  style={{ height: "55px", width:"65px", marginTop:"-15px",marginRight:"50px" }} />
+        </Link>
+        
+      </div>
+              
+            </Space>
+          
+        
+  </div> </div>
+    
+         {/* <div>
         <h1 style={{textAlign:"center",marginTop:"2%"}}>Welcome to HMI CoE</h1>
-    </div>
-       </Card>
+    </div> */}
+       
       
         {/* Card content goes here */}
       
@@ -64,7 +74,7 @@ const Login = () => {
         
         
       <Card style={{ width: "40%",height:"40%" ,marginTop:"-20%"}}>
-        
+      <h1 style={{textAlign:"center",marginTop:"2%"}}>Welcome to HMI CoE</h1>
         <Form
           name="normal_login"
           className="login-form"
@@ -76,7 +86,7 @@ const Login = () => {
         >
           <Form.Item
             name="username"
-            style={{width:"80%",paddingLeft:"28%"}}
+            style={{width:"70%",paddingLeft:"25%"}}
             rules={[
               {
                 required: true,
@@ -89,7 +99,7 @@ const Login = () => {
           </Form.Item>
           <Form.Item
             name="password"
-            style={{width:"80%",paddingLeft:"28%"}}
+            style={{width:"70%",paddingLeft:"25%"}}
             rules={[
               {
                 required: true,
@@ -105,7 +115,7 @@ const Login = () => {
           </Form.Item>
           
 
-          <Form.Item style={{width:"70%",paddingLeft:"30%",textAlign:"center"}}>
+          <Form.Item style={{width:"70%",paddingLeft:"22%",textAlign:"center"}}>
             <Button type="primary" htmlType="submit" className="login-form-button" >
               Log in
             </Button>

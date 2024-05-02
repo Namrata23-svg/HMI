@@ -78,14 +78,16 @@ const onChange = (key) => {
     
   
   const Mypdf = () => {
+   
     return (
         <div>
         
         <MyComponent/>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} 
+      <Tabs defaultActiveKey="1"  items={items} onChange={onChange} 
       
       
-      style={{paddingLeft:"80px"}} />
+      style={{paddingLeft:"80px",backgroundColor:"GrayText"}} 
+    />
       
       </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react'
 import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
- import bosl from "../assets/bosl.PNG"
+ import logo1 from "../assets/logo1.png"
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Card, Checkbox, Form, Input,Space,Typography ,message} from 'antd';
 import "../pages/Login.css"
@@ -13,7 +13,7 @@ import Divider from '@mui/material/Divider';
  import SOFT from "../assets/SOFT.jpg"
  import automate from "../assets/automate.jpg"
  import tools from "../assets/tools.jpg"
- import leapx from "../assets/leapx.PNG"
+ import leapx from "../assets/leapx.png"
  import evoco from "../assets/evoco.jpg"
  import gts from "../assets/gts.jpg"
  import crisis from "../assets/crisis.jpg"
@@ -31,7 +31,7 @@ const HmiAcc = () => {
 <div className="site-page-header-ghost-wrapper" style={{ margin: 0, padding: 0 }}>
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "15px 60px" }}>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <img src={bosl} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
+        <img src={logo1} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
         <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
       </div>
       

@@ -33,11 +33,16 @@ const SearchBar = () => {
           style={{
             height: '30px',
             width:"105px",
-            marginRight: '10px',
+            marginRight: '1px',
             padding: '0 10px',
             borderRadius: '5px',
             border: '1px solid #ccc',
-            paddingLeft:"50px"
+            paddingLeft:"50px",
+            marginLeft:"60px"
+            
+            
+        
+            
           }}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -52,6 +57,9 @@ const SearchBar = () => {
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
+            marginTop:"2px",
+            
+            
           }}
           onClick={handleSearch}
         >

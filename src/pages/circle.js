@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import hmi from "../assets/hmi.png"
 import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
- import bosl from "../assets/bosl.PNG"
+//  import bosl from "../assets/bosl.PNG"
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Card, Checkbox, Form, Input,Space,Typography ,message} from 'antd';
 import Divider from '@mui/material/Divider';
@@ -9,7 +9,7 @@ import Divider from '@mui/material/Divider';
  import SOFT from "../assets/SOFT.jpg"
  import automate from "../assets/automate.jpg"
  import tools from "../assets/tools.jpg"
- import leapx from "../assets/leapx.PNG"
+ import leapx from "../assets/leapx.png"
  import evoco from "../assets/evoco.jpg"
  import gts from "../assets/gts.jpg"
  import crisis from "../assets/crisis.jpg"

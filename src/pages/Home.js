@@ -7,7 +7,7 @@ import { Button, Descriptions ,PageHeader } from 'antd';
  import Homepage from "./circle";
  import { Card, Typography, Space  } from 'antd';
  import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
- import bosl from "../assets/bosl.PNG"
+ import logo1 from "../assets/logo1.png"
  import hmi from "../assets/hmi.png"
 import SearchBar from "./SearchBar";
 
@@ -35,22 +35,22 @@ const Home = () => {
        <div className="site-page-header-ghost-wrapper" style={{ margin: 0, padding: 0 }}>
   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "15px 60px" }}>
     <div style={{ display: "flex", alignItems: "center" }}>
-      <img src={bosl} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
+      <img src={logo1} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
       <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
     </div>
     
           <Space style={{paddingRight:"60px"}}>
-            <SearchBar/>
+           
             
             <div style={{ display: "flex", alignItems: "center" }}>
-      <img src={hmi}  style={{ height: "55px", width:"65px", marginTop:"-15px",marginRight:"50px" }} />
+      <img src={hmi}  style={{ height: "65px", width:"85px", marginTop:"-15px",marginRight:"50px" }} />
       
     </div>
             
           </Space>
         
       
-</div> </div>
+</div><SearchBar/> </div>
      {/* <div className="site-page-header-ghost-wrapper" >
        <Card style={{paddingTop:"25px"}}
       title={

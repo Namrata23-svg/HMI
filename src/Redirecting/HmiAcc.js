@@ -57,7 +57,7 @@ const HmiAcc = () => {
                   marginRight: "50px",
                   cursor: "pointer",
                 }}
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/Home")}
               />
             </div>
           </Space>

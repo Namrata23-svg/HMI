@@ -36,7 +36,7 @@ const Login = () => {
     if (values.username === "hmicoe" && values.password === "hmicoe") {
       // If correct, navigate to the desired page
       message.success("Login successful");
-      navigate("/");
+      navigate("/Home");
     } else {
       // If incorrect, show an error message (you can handle this part as needed)
       message.error("Incorrect username or password");

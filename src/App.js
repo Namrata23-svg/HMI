@@ -47,7 +47,8 @@ function App() {
           <Route path="/HmiVisualization" element={<HmiVis />} />
           <Route path="/Mahindra" element={<Mahindra />} />
           <Route path="/VSolutions" element={<VSolutions />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Login />} />
         </Routes>
       </Router>
     </>

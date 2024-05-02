@@ -10,6 +10,7 @@
     width: 100%;
     height: 200px; 
     overflow: hidden; 
+    background-color: #E5E5E5;
 
     
         
@@ -24,46 +25,63 @@
     height: 100%;
     object-fit: cover;
   }
+  .card-hover{
+    background-color: #EEEEEE;
+  }
   .card-hover:hover{
     background-color:#CDCDCD;
+  }
+  .card1-hover{
+    background-color: #EEEEEE;
   }
   .card1-hover:hover{
     background-color: #CDCDCD;
   }
+  .card2-hover{
+    background-color: #EEEEEE;
+  }
+  
   .card2-hover:hover{
     background-color: #CDCDCD;
+  }
+  .card3-hover{
+    background-color: #EEEEEE;
   }
   .card3-hover:hover{
     background-color: #CDCDCD;
   }
+  .card4-hover{
+    background-color: #EEEEEE;
+  }
   .card4-hover:hover{
     background-color: #CDCDCD;
+  }
+  .card5-hover{
+    background-color: #EEEEEE;
   }
   .card5-hover:hover{
     background-color: #CDCDCD;
   }
+  .card6-hover{
+    background-color: #EEEEEE;
+  }
   .card6-hover:hover{
     background-color: #CDCDCD;
+  }
+  .card7-hover{
+    background-color: #EEEEEE;
   }
   .card7-hover:hover{
     background-color: #CDCDCD;
   }
+  .card8-hover{
+    background-color: #EEEEEE;
+  }
   .card8-hover:hover{
     background-color: #CDCDCD;
   }
-/* Media query for screens with a maximum width of 768px */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px; /* Decrease font size for smaller screens */
-  }
-}
 
-/* Media query for screens with a minimum width of 1200px */
-@media (min-width: 1000px) {
-  body {
-    font-size: 18px; /* Increase font size for larger screens */
-  }
-}
+  
   
   
   

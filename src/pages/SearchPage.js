@@ -8,23 +8,13 @@ import { Button, Card, Checkbox, Form, Input,Space,Typography } from 'antd';
 import "../pages/chnaging.css"
 import Link from 'antd/es/typography/Link';
 import { useNavigate } from 'react-router-dom';
+import Hoverview from "../assets/Hoverview.png"
 import SearchBar from './SearchBar';
 const { Title, Text } = Typography;
-const MyComponent = () => {
+const SearchPage = () => {
   const navigate=useNavigate()
   return (
-  //   <div className="site-page-header-ghost-wrapper" >
-  //     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0 60px", height: "50px" }}>
-  //   <div style={{ display: "flex", alignItems: "center" }}>
-  //     <img src={bosl} style={{ height: "50px", marginTop: "5px" }} />
-  //     <Title level={4} style={{ margin: 0, paddingTop: "8px", color: "red", fontSize: "34px", height: "70px", width: "70px" }}><b>BOSCH</b></Title>
-  //   </div>
-  //   <div style={{ display: "flex" }}>
-  //     <Button icon={<PhoneOutlined />} type="text">Contact</Button>
-  //     <Button icon={<MenuOutlined />} type="text">Menu</Button>
-  //   </div>
-  // </div>
-  <div className='changing'> 
+    <div className='changing'> 
 
 
      <div className="site-page-header-ghost-wrapper" style={{ margin: 0, padding: 0 }}>
@@ -35,7 +25,7 @@ const MyComponent = () => {
     </div>
     
           <Space style={{paddingRight:"60px"}}>
-            <SearchBar/>
+            
             
             <div style={{ display: "flex", alignItems: "center" }}>
               
@@ -50,7 +40,17 @@ const MyComponent = () => {
       
 </div> </div>
 
-            
+                 
+      <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer",marginLeft:"50px",marginTop:"20px"}} bodyStyle={{ padding: 0 }} hoverable
+       onClick={() => navigate("/HMI")} className='card1-hover'>
+        <div className="custom-image">
+          <img alt="example" width="100%" src={Hoverview}  />
+        </div>
+        <div className="custom-card">
+          <h3 style={{textAlign:"center",fontSize:"20px",marginTop:"40px"}}>UX/UI</h3>
+          {/* <p>www.instagram.com</p> */}
+        </div>
+      </Card>
 
     </div>
 
@@ -58,4 +58,4 @@ const MyComponent = () => {
   )
 }
 
-export default MyComponent
+export default SearchPage

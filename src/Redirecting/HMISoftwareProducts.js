@@ -16,13 +16,22 @@ import "../pages/Login.css";
 import { useNavigate } from "react-router-dom";
 import hmi from "../assets/hmi.png";
 import Hdev from "../assets/Hdev.png";
-
+import voice from "../assets/voice.jpg";
+import Dev from "../assets/Dev.png";
+import Divider from "@mui/material/Divider";
+import ux from "../assets/ux.jpg";
 import SOFT from "../assets/SOFT.jpg";
+import automate from "../assets/automate.jpg";
+import tools from "../assets/tools.jpg";
 import leapx from "../assets/leapx.png";
+import evoco from "../assets/evoco.jpg";
+import gts from "../assets/gts.jpg";
+import crisis from "../assets/crisis.jpg";
 import "../pages/circle.css";
+import Link from "antd/es/typography/Link";
 
 const { Title, Text } = Typography;
-const HmiAcc = () => {
+const HMISoftwareProducts = () => {
   const navigate = useNavigate();
   return (
     <div>
@@ -74,7 +83,7 @@ const HmiAcc = () => {
         }}
       >
         {" "}
-        HMI Accelarators
+        HMI Software Products
       </h1>
 
       <div
@@ -96,21 +105,21 @@ const HmiAcc = () => {
             style={{ width: 300, cursor: "pointer" }}
             bodyStyle={{ padding: 0 }}
             hoverable
-            onClick={() => navigate("/leapx")}
+            onClick={() => navigate("/HMI")}
             className="card-hover"
           >
             <div className="custom-image">
-              <img alt="example" width="100%" src={leapx} />
+              <img alt="example" width="100%" src={voice} />
             </div>
             <div className="custom-card">
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: "20px",
+                  fontSize: "18px",
                   marginTop: "40px",
                 }}
               >
-                LeapX
+                Voice Verification Engine
               </h3>
             </div>
           </Card>
@@ -119,21 +128,44 @@ const HmiAcc = () => {
             style={{ width: 300, cursor: "pointer" }}
             bodyStyle={{ padding: 0 }}
             hoverable
-            onClick={() => navigate("/HmiVisualization")}
+            onClick={() => navigate("/hmianalytics")}
             className="card1-hover"
           >
             <div className="custom-image">
-              <img alt="example" width="100%" src={SOFT} />
+              <img alt="example" width="100%" src={Dev} />
             </div>
             <div className="custom-card">
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: "20px",
+                  fontSize: "18px",
                   marginTop: "40px",
                 }}
               >
-                HMI Visualizer
+                HMI Analytics
+              </h3>
+            </div>
+          </Card>
+          <Card
+            style={{ width: 300, cursor: "pointer" }}
+            bodyStyle={{ padding: 0 }}
+            hoverable
+            onClick={() => navigate("/evoco")}
+            className="card2-hover"
+          >
+            <div className="custom-image">
+              <img alt="example" width="100%" src={evoco} />
+            </div>
+            <div className="custom-card">
+              <h3
+                style={{
+                  textAlign: "center",
+                  fontSize: "18px",
+                  marginTop: "40px",
+                  marginLeft: "45px",
+                }}
+              >
+                Evoco
               </h3>
             </div>
           </Card>
@@ -164,4 +196,4 @@ const HmiAcc = () => {
   );
 };
 
-export default HmiAcc;
+export default HMISoftwareProducts;

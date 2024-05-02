@@ -28,6 +28,7 @@ const HMI = () => {
       "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMI_CoE_Overview_2023_For_PRM_V2.pdf"
     );
   }, []);
+
   const handleTabChange = (key) => {
     setSelectedTab(key);
     switch (key) {
@@ -56,12 +57,6 @@ const HMI = () => {
       label: "PRESENTATION",
       children: (
         <div style={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
-          {/* <DocViewer
-                    documents={[
-                        { uri: 'assets/leapx.pdf' } // Replace 'assets/leapx.pdf' with the path to your PDF file
-                    ]}
-                /> */}
-
           <iframe
             title="HMI-PPT"
             src={contentUrl}
@@ -90,16 +85,16 @@ const HMI = () => {
                 width: "80%",
                 height: "100px",
                 marginLeft: "10px",
+                backgroundImage: `url(${hmi1})`,
+                backgroundSize: "cover",
               }}
               onClick={() =>
                 handleCardClick(
                   "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMI_CoE_Overview_2023_For_PRM_V2.pdf"
                 )
               }
-            >
-              <p>PPT 1</p>
-            </Card>
-            <Card
+            ></Card>
+            {/* <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
@@ -127,7 +122,7 @@ const HMI = () => {
               onClick={() => handleCardClick("https://example.com/ppt3")}
             >
               <p>PPT 3</p>
-            </Card>
+            </Card> */}
           </div>
         </div>
       ),

@@ -43,9 +43,7 @@ const Login = () => {
     }
   };
   return (
-    <div
-      style={{ backgroundImage: `url(${HomeScreen})`, backgroundSize: "cover" }}
-    >
+    <div style={{ backgroundImage: `url(${HomeScreen})` }}>
       <div
         className="site-page-header-ghost-wrapper"
         style={{ margin: 0, padding: 0 }}

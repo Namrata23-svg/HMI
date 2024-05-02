@@ -14,7 +14,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 // import { Link } from 'react-router-dom';
 
 
-const leapx = () => {
+const Vsolutions = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState('1');
   const [contentUrl, setContentUrl] = useState('');
@@ -174,4 +174,4 @@ const handleCardClick = (url) => {
     );
   };
   
-  export default leapx;
+  export default Vsolutions;

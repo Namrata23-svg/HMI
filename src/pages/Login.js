@@ -8,7 +8,7 @@ import React from 'react';
  import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
  import bosl from "../assets/bosl.PNG"
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Card, Checkbox, Form, Input,Space,Typography } from 'antd';
+import { Button, Card, Checkbox, Form, Input,Space,Typography ,message} from 'antd';
 import "../pages/Login.css"
 import { useNavigate } from 'react-router-dom';
 import log from "../assets/log.jpg"
@@ -19,6 +19,16 @@ const Login = () => {
     const navigate = useNavigate();
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
+
+    if (values.username === 'hmicoe' && values.password === 'hmicoe') {
+      // If correct, navigate to the desired page
+      message.success('Login successful');
+      navigate('/');
+    } else {
+      // If incorrect, show an error message (you can handle this part as needed)
+    message.error('Incorrect username or password');
+    }
+
     
   };
   return (
@@ -96,7 +106,7 @@ const Login = () => {
           
 
           <Form.Item style={{width:"70%",paddingLeft:"30%",textAlign:"center"}}>
-            <Button type="primary" htmlType="submit" className="login-form-button" onClick={() => navigate("/")}>
+            <Button type="primary" htmlType="submit" className="login-form-button" >
               Log in
             </Button>
            

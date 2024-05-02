@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Decrease font size for smaller screens */
+    }
+  }
+  
+  /* Media query for screens with a minimum width of 1200px */
+  @media (min-width: 1000px) {
+    body {
+      font-size: 18px; /* Increase font size for larger screens */
+    }
+  }

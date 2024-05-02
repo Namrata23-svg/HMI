@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import {Card} from "antd"
 
 import Divider from '@mui/material/Divider';
- import svg from "../assets/svg.png"
+ import ux from "../assets/ux.jpg"
  import SOFT from "../assets/SOFT.jpg"
  import automate from "../assets/automate.jpg"
  import tools from "../assets/tools.jpg"
  import leapx from "../assets/leapx.PNG"
+ import evoco from "../assets/evoco.jpg"
+ import gts from "../assets/gts.jpg"
  import crisis from "../assets/crisis.jpg"
  import "../pages/circle.css"
  
@@ -20,7 +22,7 @@ import Divider from '@mui/material/Divider';
 
 const Homepage=()=>{
     const navigate = useNavigate(); // Use useNavigate hook here
-    console.log("Card clicked");
+    
     const [isHovered, setIsHovered] = useState(false);
  
     
@@ -40,13 +42,13 @@ const Homepage=()=>{
         <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '20px' ,justifyContent:"centre"}}>
             
-      <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} 
+      <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }}  hoverable
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => navigate("/HMI")} >
+      onClick={() => navigate("/HMI")} className='card-hover' >
         
         <div className="custom-image">
-          <img alt="example" width="100%" src={svg} />
+          <img alt="example" width="100%" src={ux} />
         </div>
         <div className="custom-card">
           <h3 style={{textAlign:"center",fontSize:"20px",marginTop:"50px"}}>UX/UI</h3>
@@ -56,7 +58,8 @@ const Homepage=()=>{
           
       </Card>
 
-      <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }}  onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
+       onClick={() => navigate("/HMI")} className='card1-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={SOFT} />
         </div>
@@ -66,7 +69,8 @@ const Homepage=()=>{
         </div>
       </Card>
 
-      <Card style={{ width: 300,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
+      onClick={() => navigate("/HMI")} className='card2-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={automate} />
         </div>
@@ -80,7 +84,8 @@ const Homepage=()=>{
     
 
 
-      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }}  onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} hoverable
+       onClick={() => navigate("/HMI")}  className='card3-hover'>
       
         <div className="custom-image">
           <img alt="example" width="100%" src={tools} />
@@ -90,7 +95,8 @@ const Homepage=()=>{
           {/* <p>www.instagram.com</p> */}
         </div>
       </Card>
-      <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }}  onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
+       onClick={() => navigate("/leapx")}  className='card4-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={leapx}/>
         </div>
@@ -99,7 +105,8 @@ const Homepage=()=>{
           
         </div>
       </Card>
-      <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }} onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
+      onClick={() => navigate("/HMI")}  className='card5-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={crisis}/>
         </div>
@@ -119,16 +126,18 @@ const Homepage=()=>{
       <div style={{ flexDirection: 'column', alignItems: 'centre' }}> */}
       <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', marginTop: '20px' }}>
-      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} hoverable
+       onClick={() => navigate("/HMI")}  className='card6-hover'>
         <div className="custom-image">
-          <img alt="example" width="100%" src={crisis}/>
+          <img alt="example" width="100%" src={evoco}/>
         </div>
         <div className="custom-card">
             <h3 style={{textAlign:"center",fontSize:"20px"}}>Evoco </h3>
           
         </div>
       </Card>
-      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} hoverable
+      onClick={() => navigate("/HMI")}  className='card7-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={crisis}/>
         </div>
@@ -137,9 +146,10 @@ const Homepage=()=>{
           
         </div>
       </Card>
-      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} onClick={() => navigate("/HMI")}>
+      <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} hoverable
+      onClick={() => navigate("/HMI")}  className='card8-hover'>
         <div className="custom-image">
-          <img alt="example" width="100%" src={crisis}/>
+          <img alt="example" width="100%" src={gts}/>
         </div>
         <div className="custom-card">
             <h3 style={{textAlign:"center",fontSize:"20px"}}>GTS </h3>

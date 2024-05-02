@@ -6,7 +6,7 @@ const MyPage = () => {
     <div>
         <MyComponent/>
         <iframe 
-        src="https://www.slideshare.net/JustEngineering/what-is-hmi"
+        src="../assets/saved.pdf"
         width="100%" 
         height="569" 
         frameborder="0" 

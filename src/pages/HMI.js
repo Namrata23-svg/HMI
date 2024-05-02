@@ -1,7 +1,10 @@
 import React from 'react'
 import MyComponent from './changing'
+import DocViewer from 'react-doc-viewer';
 import { Tabs } from 'antd';
-
+import leapx from "../assets/leapx.pdf"
+import { Viewer } from '@react-pdf-viewer/core'; // Import the viewer component
+import '@react-pdf-viewer/core/lib/styles/index.css'; 
 // import Box from '@mui/material/Box';
 // import "../pages/HMI.css"
 // import { Link } from 'react-router-dom';
@@ -15,17 +18,23 @@ const onChange = (key) => {
       key: '1',
       label: 'PPT',
       children: (
-        <div>
+        <div style={{ width: '100%', margin: 0, padding: 0 }}> 
+            {/* <DocViewer
+                    documents={[
+                        { uri: 'assets/leapx.pdf' } // Replace 'assets/leapx.pdf' with the path to your PDF file
+                    ]}
+                /> */}
           
-          <iframe 
-        src="https://www.slideshare.net/JustEngineering/what-is-hmi"
+            <iframe 
+          
+           src= "https://www.slideshare.net/JustEngineering/what-is-hmi"
         width="100%" 
         height="569" 
         frameborder="0" 
-        allowfullscreen="true" 
+        allowFullScreen="true" 
         mozallowfullscreen="true" 
         webkitallowfullscreen="true"
-      ></iframe>
+      ></iframe>  
         </div>
       ),
     },
@@ -73,7 +82,11 @@ const onChange = (key) => {
         <div>
         
         <MyComponent/>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} style={{paddingLeft:"80px"}} />
+      <Tabs defaultActiveKey="1" items={items} onChange={onChange} 
+      
+      
+      style={{paddingLeft:"80px"}} />
+      
       </div>
     );
   };

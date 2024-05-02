@@ -92,7 +92,7 @@ const Homepage=()=>{
       </Card>
 
       <Card style={{ width: 300 ,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
-       onClick={() => navigate("/HMI")} className='card1-hover'>
+       onClick={() => navigate("/Evoco")} className='card1-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={Hoverview} />
         </div>
@@ -103,7 +103,7 @@ const Homepage=()=>{
       </Card>
 
       <Card style={{ width: 300,marginTop:"10px",cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
-      onClick={() => navigate("/HMI")} className='card2-hover'>
+      onClick={() => navigate("/hmianalytics")} className='card2-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={Dev} />
         </div>
@@ -118,7 +118,7 @@ const Homepage=()=>{
 
 
       <Card style={{ width: 300,cursor:"pointer" }} bodyStyle={{ padding: 0 }} hoverable
-       onClick={() => navigate("/HMI")}  className='card3-hover'>
+       onClick={() => navigate("/hmivisualization")}  className='card3-hover'>
       
         <div className="custom-image">
           <img alt="example" width="100%" src={Htest} />
@@ -129,7 +129,7 @@ const Homepage=()=>{
         </div>
       </Card>
       <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
-       onClick={() => navigate("/HmiAcc")}  className='card4-hover'>
+       onClick={() => navigate("/Mahindra")}  className='card4-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={Hsoft}/>
         </div>
@@ -139,7 +139,7 @@ const Homepage=()=>{
         </div>
       </Card>
       <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
-      onClick={() => navigate("/HMI")}  className='card5-hover'>
+      onClick={() => navigate("/ridebuddy")}  className='card5-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={Maya}/>
         </div>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 
 import MyComponent from './pages/changing';
-
+import Evoco from "./Redirecting/Evoco"
 import HMI from './pages/HMI';
 import Automated from './Redirecting/Automated';
 import MyPage from './Redirecting/MyPage';
@@ -14,6 +14,10 @@ import Login from './pages/Login';
 import Mypdf from './pages/Mypdf';
 import HmiAcc from './Redirecting/HmiAcc';
 import SearchPage from './pages/SearchPage';
+import Ridebuddy from './Redirecting/Ridebuddy';
+import Hmianalytics from './Redirecting/Hmianalytics';
+import HmiVis from './Redirecting/HmiVisualization';
+import Mahindra from './Redirecting/Mahindra';
 
 
 
@@ -37,6 +41,11 @@ function App() {
           <Route path="/leapx" element={<Mypdf/>} />
           <Route path="/HmiAcc" element={<HmiAcc/>}/>
           <Route path="/SearchPage" element={<SearchPage/>}/>
+          <Route path="/evoco" element={<Evoco/>}/>
+          <Route path="/ridebuddy" element={<Ridebuddy/>}/>
+          <Route path="/hmianalytics" element={<Hmianalytics/>}/>
+          <Route path="/hmivisualization" element={<HmiVis/>}/>
+          <Route path="/Mahindra" element={<Mahindra/>}/>
           <Route path="/" element={<Home/>} />
       
       </Routes>

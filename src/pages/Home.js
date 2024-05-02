@@ -1,19 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Button, Descriptions ,PageHeader } from 'antd';
+import { Button, Descriptions, PageHeader } from "antd";
 // import PageHeader from "antd"
 // import  Icon  from "antd";
- import { Menu } from "antd";
- import Homepage from "./circle";
- import { Card, Typography, Space  } from 'antd';
- import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
- import logo1 from "../assets/logo1.png"
- import hmi from "../assets/hmi.png"
+import { Menu } from "antd";
+import Homepage from "./circle";
+import { Card, Typography, Space } from "antd";
+import { PhoneOutlined, MenuOutlined } from "@ant-design/icons";
+import logo1 from "../assets/logo1.png";
+import hmi from "../assets/hmi.png";
 import SearchBar from "./SearchBar";
 
 const { Title, Text } = Typography;
-
-
 
 // import { Link } from "@bosch/react-frok";
 // import { Navigation } from "@bosch/react-frok";
@@ -23,35 +21,45 @@ const { Title, Text } = Typography;
 // import BOSCH from "../assets/BOSCH.png"
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
 
- 
-
-
-
-
-
 const Home = () => {
   return (
     <div>
-       <div className="site-page-header-ghost-wrapper" style={{ margin: 0, padding: 0 }}>
-  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "15px 60px" }}>
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <img src={logo1} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
-      <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
-    </div>
-    
-          <Space style={{paddingRight:"60px"}}>
-           
-            
+      <div
+        className="site-page-header-ghost-wrapper"
+        style={{ margin: 0, padding: 0 }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "15px 60px",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={logo1}
+              style={{ height: "50px", marginTop: "5px", marginRight: "10px" }}
+            />
+            <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
+          </div>
+
+          <Space style={{ paddingRight: "60px" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
-      <img src={hmi}  style={{ height: "65px", width:"85px", marginTop:"-15px",marginRight:"50px" }} />
-      
-    </div>
-            
+              <img
+                src={hmi}
+                style={{
+                  height: "65px",
+                  width: "85px",
+                  marginTop: "-15px",
+                  marginRight: "50px",
+                }}
+              />
+            </div>
           </Space>
-        
-      
-</div><SearchBar/> </div>
-     {/* <div className="site-page-header-ghost-wrapper" >
+        </div>
+      </div>
+      {/* <div className="site-page-header-ghost-wrapper" >
        <Card style={{paddingTop:"25px"}}
       title={
         <Space style={{ height: "50px", paddingLeft: "60px" }}>
@@ -68,15 +76,11 @@ const Home = () => {
         }
       >
        </Card> */}
-        {/* Card content goes here */}
-      
-      <Homepage/> 
+      {/* Card content goes here */}
+
+      <Homepage />
     </div>
-    
-  )
-  }
-
-
-
+  );
+};
 
 export default Home;

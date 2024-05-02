@@ -129,7 +129,7 @@ const Homepage=()=>{
         </div>
       </Card>
       <Card style={{ width: 300 ,cursor:"pointer"}} bodyStyle={{ padding: 0 }} hoverable
-       onClick={() => navigate("/Mahindra")}  className='card4-hover'>
+       onClick={() => navigate("/HmiAcc")}  className='card4-hover'>
         <div className="custom-image">
           <img alt="example" width="100%" src={Hsoft}/>
         </div>

@@ -7,7 +7,7 @@ import hmi from "../assets/hmi.png"
  
 //  import { Card, Typography, Space  } from 'antd';
  import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
- import bosl from "../assets/bosl.PNG"
+ import logo1 from "../assets/logo1.png"
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Card, Checkbox, Form, Input,Space,Typography ,message} from 'antd';
 import "../pages/Login.css"
@@ -42,7 +42,7 @@ const Login = () => {
     <div className="site-page-header-ghost-wrapper" style={{ margin: 0, padding: 0 }}>
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "15px 60px" }}>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <img src={bosl} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
+        <img src={logo1} style={{ height: "50px", marginTop: "5px", marginRight: "10px" }} />
         <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
       </div>
       
@@ -50,7 +50,7 @@ const Login = () => {
               
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Link>
-        <img src={hmi}  style={{ height: "55px", width:"65px", marginTop:"-15px",marginRight:"50px" }} />
+        <img src={hmi}  style={{ height: "65px", width:"85px", marginTop:"-15px",marginRight:"50px" }} />
         </Link>
         
       </div>
@@ -70,10 +70,10 @@ const Login = () => {
       
     
    
-    <div className="login-container">
+    <div className="login-container" >
         
         
-      <Card style={{ width: "40%",height:"40%" ,marginTop:"-20%"}}>
+      <Card style={{ width: "40%",height:"40%" ,marginTop:"-20%",backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
       <h1 style={{textAlign:"center",marginTop:"2%"}}>Welcome to HMI CoE</h1>
         <Form
           name="normal_login"

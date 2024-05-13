@@ -1,7 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-
+import { initReactI18next } from 'react-i18next';
+import i18next from 'i18next';
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import MyComponent from "./pages/changing";
 import Evoco from "./Redirecting/Evoco";
 import HMI from "./pages/HMI";
@@ -20,10 +24,32 @@ import Mahindra from "./Redirecting/Mahindra";
 import LeapX from "./Redirecting/leapx";
 import VSolutions from "./Redirecting/V&v";
 import HMISoftwareProducts from "./Redirecting/HMISoftwareProducts";
-
+import deTranslation from "../src/pages/de.json"
+import LanguageBar from "./pages/SearchBar";
 function App() {
+  i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+     
+      de: {
+        translation: deTranslation,
+      },
+    },
+    fallbackLng: 'en',
+    detection: {
+      order: ['navigator'],
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
   return (
     <>
+    <I18nextProvider i18n={i18n}>
+    
       <Router>
         <Routes>
           {/* <Route path="/" element={<Homepage />} /> */}
@@ -47,10 +73,12 @@ function App() {
           <Route path="/HmiVisualization" element={<HmiVis />} />
           <Route path="/Mahindra" element={<Mahindra />} />
           <Route path="/VSolutions" element={<VSolutions />} />
+          <Route path="/searchpage" element={<SearchPage />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/" element={<Login />} />
         </Routes>
       </Router>
+      </I18nextProvider>
     </>
   );
 }

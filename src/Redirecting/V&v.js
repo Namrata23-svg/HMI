@@ -4,6 +4,7 @@ import { Radio, Space } from "antd";
 import DocViewer from "react-doc-viewer";
 import { Tabs, Card } from "antd";
 import leapx from "../assets/leapx.pdf";
+import Hdev from "../assets/Hdev.png"
 import { Viewer } from "@react-pdf-viewer/core"; // Import the viewer component
 import hmi1 from "../assets/hmi1.jpg";
 import { useNavigate } from "react-router-dom";
@@ -79,11 +80,12 @@ const Vsolutions = () => {
               height: "18%",
             }}
           >
+             <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+                
                 marginTop: "10px",
                 width: "80%",
                 height: "100px",
@@ -97,6 +99,46 @@ const Vsolutions = () => {
                 )
               }
             ></Card>
+             <p style={{marginLeft:"1em"}}><b>Video</b></p>
+            <Card
+              style={{
+                marginBottom: "10px",
+                cursor: "pointer",
+        
+                marginTop: "10px",
+                width: "80%",
+                marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
+              }}
+              onClick={() =>
+                handleCardClick(
+                  "https://file-examples.com/index.php/sample-documents-download/sample-pdf-download/"
+                )
+              }
+            >
+              <p>PPT 2</p>
+            </Card>
+            <p style={{marginLeft:"1em"}}><b>Video</b></p>
+            <Card
+              style={{
+                marginBottom: "10px",
+                cursor: "pointer",
+            
+                marginTop: "10px",
+                width: "80%",
+                marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
+              }}
+              onClick={() =>
+                handleCardClick(
+                  "https://file-examples.com/index.php/sample-documents-download/sample-pdf-download/"
+                )
+              }
+            >
+              <p>PPT 2</p>
+            </Card>
           </div>
         </div>
       ),
@@ -123,14 +165,17 @@ const Vsolutions = () => {
               height: "18%",
             }}
           >
+             <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+                
                 marginTop: "10px",
                 width: "80%",
                 marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
               }}
               onClick={() =>
                 handleCardClick("https://www.youtube.com/embed/R_2DCYl4VaA")
@@ -138,14 +183,17 @@ const Vsolutions = () => {
             >
               <p>Video 1</p>
             </Card>
+            <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+        
                 marginTop: "10px",
                 width: "80%",
                 marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
               }}
               onClick={() =>
                 handleCardClick("https://www.youtube.com/watch?v=kujHQgK352o")
@@ -153,14 +201,17 @@ const Vsolutions = () => {
             >
               <p>Video 2</p>
             </Card>
+            <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+                
                 marginTop: "10px",
                 width: "80%",
                 marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
               }}
               onClick={() => handleCardClick("https://example.com/video3")}
             >
@@ -194,14 +245,17 @@ const Vsolutions = () => {
               height: "18%",
             }}
           >
+             <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+                
                 marginTop: "10px",
                 width: "80%",
                 marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
               }}
               onClick={() =>
                 handleCardClick(
@@ -211,14 +265,17 @@ const Vsolutions = () => {
             >
               <p>Video 1</p>
             </Card>
+            <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+    
                 marginTop: "10px",
                 width: "80%",
                 marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
               }}
               onClick={() =>
                 handleCardClick("https://www.hmiadvantage.com/case-studies/")
@@ -226,14 +283,17 @@ const Vsolutions = () => {
             >
               <p>Video 2</p>
             </Card>
+            <p style={{marginLeft:"1em"}}><b>Video</b></p>
             <Card
               style={{
                 marginBottom: "10px",
                 cursor: "pointer",
-                border: "1px solid #000",
+    
                 marginTop: "10px",
                 width: "80%",
                 marginLeft: "10px",
+                backgroundImage: `url(${Hdev})`,
+                backgroundSize: "cover",
               }}
               onClick={() => handleCardClick("https://example.com/video3")}
             >

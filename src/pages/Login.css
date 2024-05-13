@@ -3,51 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  @media screen and (max-width: 480px) {
-    /* Mobile styles */
-    .card-container {
-      width: 100%; /* Adjusted width for mobile devices */
-      max-width: none; /* Removing maximum width for mobile devices */
-      margin-top: -30%; /* Adjusting margin for better positioning */
-    }
-  
-    .login-form .login-form-item {
-      width: 100%; /* Setting full width for username and password fields */
-    }
-
-    
-    h1 {
-      font-size: 20px; /* Decrease font size for mobile */
-      margin-bottom: 10px; /* Adjust bottom margin for mobile */
-    }
+    flex-wrap:wrap;
   }
   
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  /* Tablet styles */
-  .card-container {
-    width: 60%;
-    height: 50%;
-    margin-top: -30%;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* iPad styles */
-  .card-container {
-    width: 60%;
-    height: 40%;
-    margin-top: -20%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  /* Laptop/Desktop styles */
-  .card-container {
-    width: 40%;
-    height: 40%;
-    margin-top: -20%;
-  }
-}
-

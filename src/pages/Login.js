@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import hmi from "../assets/hmi.png";
-
-import HomeScreen from "../assets/HomeScreen.png";
+import { IconButton, InputBase } from '@mui/material';
+import { Search as SearchIcon } from '@mui/icons-material';
+import HomeScreen from "../assets/HMIANALYTICS.jpg";
 
 // import { Button, Descriptions ,PageHeader } from 'antd';
 // import PageHeader from "antd"
@@ -25,10 +26,24 @@ import "../pages/Login.css";
 import { useNavigate } from "react-router-dom";
 import log from "../assets/log.jpg";
 import Home from "./Home";
+import { useMediaQuery } from 'react-responsive';
 import Link from "antd/es/typography/Link";
+import SearchBar from "./SearchBar";
+import LanguageBar from "./SearchBar";
 
 const { Title, Text } = Typography;
 const Login = () => {
+
+  const [isSearchVisible, setSearchVisible] = useState(false);
+
+  const toggleSearch = () => {
+    setSearchVisible(!isSearchVisible);
+  };
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
+  const backgroundImageMobile = `url(${HomeScreen})`;
+  const backgroundImageDesktop = `url(${HomeScreen})`;
+   
   const navigate = useNavigate();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
@@ -43,7 +58,12 @@ const Login = () => {
     }
   };
   return (
-    <div style={{ backgroundImage: `url(${HomeScreen})` }}>
+    <div style={{backgroundRepeat: 'no-repeat', 
+    backgroundSize: isMobile ? 'cover' : 'cover',
+    backgroundPosition: 'center',
+    backgroundImage: `url(${HomeScreen})` }}>
+      
+     
       <div
         className="site-page-header-ghost-wrapper"
         style={{ margin: 0, padding: 0 }}
@@ -53,34 +73,54 @@ const Login = () => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "15px 60px",
+            padding: isSmallScreen ? '15px' : '15px 60px',
+            
           }}
         >
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div style={{ display: "flex", alignItems: "center",flexWrap:"wrap" }}>
             <img
               src={logo1}
               style={{ height: "50px", marginTop: "5px", marginRight: "10px" }}
             />
-            <h4 style={{ margin: 0, color: "red", fontSize: "34px" }}>BOSCH</h4>
+            <h4 style={{ margin: 0, color: "red",  fontSize: isSmallScreen ? '24px' : '34px' }}>BOSCH</h4>
           </div>
-
-          <Space style={{ paddingRight: "60px" }}>
-            <div style={{ display: "flex", alignItems: "center" }}>
+          
+          
+          <Space style={{ paddingRight: isSmallScreen ? '15px' : '60px' }}>
+          <LanguageBar/>
+            <div className="search-container" >
+     <IconButton onClick={toggleSearch} >
+         <SearchIcon  />
+       </IconButton>
+       {isSearchVisible && (
+         <InputBase
+           placeholder="Search..."
+           inputProps={{ 'aria-label': 'search' }}
+         />
+       )}
+     </div>
+            <div style={{ display: "flex", alignItems: "center",flexWrap:"wrap"}}>
               <Link>
                 <img
                   src={hmi}
                   style={{
                     height: "65px",
                     width: "85px",
-                    marginTop: "-15px",
-                    marginRight: "50px",
+                    marginTop: isSmallScreen ? '-10px' : '-15px', marginRight: isSmallScreen ? '20px' : '50px' 
                   }}
                 />
+                
+     
               </Link>
             </div>
+           
+     
           </Space>
+          
         </div>{" "}
+       
       </div>
+      
 
       {/* <div>
         <h1 style={{textAlign:"center",marginTop:"2%"}}>Welcome to HMI CoE</h1>
@@ -91,9 +131,9 @@ const Login = () => {
       <div className="login-container">
         <Card
           style={{
-            width: "40%",
-            height: "40%",
-            marginTop: "-20%",
+            width: isSmallScreen ? '80%' : '40%',
+            height: isSmallScreen ? '50%' : '40%',
+            marginTop: isSmallScreen ? '-10%' : '-20%',
             backgroundColor: "rgba(255, 255, 255, 0.5)",
           }}
         >

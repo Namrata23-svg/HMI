@@ -116,7 +116,7 @@ const ChatComponent = () => {
           Hi, There! <br />
           Welcome to <b>HMI-COE</b> !<br />
           <br />
-          I am Simba! <br />
+          I am Maya! <br />
           Text Assistant from <b>HMI-COE </b>! <br />
           <br />
           Ask your question here! <br />

@@ -29,7 +29,7 @@ const Hmianalytics = () => {
   useEffect(() => {
     // Set the default content URL for the selected tab
     setContentUrl(
-      "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMIAnalytics-Deck2.pptx"
+      "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMIAnalytics-Deck2.pdf"
     );
   }, []);
 
@@ -41,7 +41,7 @@ const Hmianalytics = () => {
     switch (key) {
       case "1": // If the selected tab is "PPT"
         setContentUrl(
-          "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMIAnalytics-Deck2.pptx"
+          "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMIAnalytics-Deck2.pdf"
         ); // Reset contentUrl state for other tabs
         break;
       case "2": // If the selected tab is "VIDEO"
@@ -156,7 +156,7 @@ const Hmianalytics = () => {
               }}
               onClick={() =>
                 handleCardClick(
-                  "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMIAnalytics-Deck2.pptx"
+                  "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMIAnalytics-Deck2.pdf"
                 )
               }
             >

@@ -25,7 +25,11 @@ import LeapX from "./Redirecting/leapx";
 import VSolutions from "./Redirecting/V&v";
 import HMISoftwareProducts from "./Redirecting/HMISoftwareProducts";
 import deTranslation from "../src/pages/de.json"
+
 import LanguageBar from "./pages/SearchBar";
+import Voicebiometry from "./Redirecting/Voicebiometry";
+import Solutions from "./Redirecting/V&v";
+import translations from "./pages/translations";
 function App() {
   i18n
   .use(LanguageDetector)
@@ -45,10 +49,10 @@ function App() {
       escapeValue: false,
     },
   });
-
+  
   return (
     <>
-    <I18nextProvider i18n={i18n}>
+   
     
       <Router>
         <Routes>
@@ -64,6 +68,8 @@ function App() {
           <Route path="/leapx" element={<LeapX />} />
           <Route path="/HmiAcc" element={<HmiAcc />} />
           <Route path="/SearchPage" element={<SearchPage />} />
+          <Route path="/Voicebiometry" element={<Voicebiometry />} />
+          <Route path="/V&V" element={<Solutions />} />
           <Route path="/evoco" element={<Evoco />} />
           <Route
             path="/HmiSoftwareProducts"
@@ -78,7 +84,7 @@ function App() {
           <Route path="/" element={<Login />} />
         </Routes>
       </Router>
-      </I18nextProvider>
+      
     </>
   );
 }

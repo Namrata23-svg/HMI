@@ -191,7 +191,7 @@ const Homepage = () => {
             }}
             bodyStyle={{ padding: 0 }}
             hoverable
-            onClick={() => navigate("/hmivisualization")}
+            onClick={() => navigate("/VSolutions")}
             className="card3-hover"
           >
             <div className="custom-image">

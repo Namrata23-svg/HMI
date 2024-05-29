@@ -14,7 +14,7 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 // import "../pages/HMI.css"
 // import { Link } from 'react-router-dom';
 
-const Vsolutions = () => {
+const VSolutions = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState("1");
   const [contentUrl, setContentUrl] = useState("");
@@ -346,4 +346,4 @@ const Vsolutions = () => {
   );
 };
 
-export default Vsolutions;
+export default VSolutions;

@@ -158,7 +158,7 @@ const HMISoftwareProducts = () => {
             }}
             bodyStyle={{ padding: 0 }}
             hoverable
-            onClick={() => navigate("/HMI")}
+            onClick={() => navigate("/Voicebiometry")}
             className="card-hover"
           >
             <div className="custom-image">

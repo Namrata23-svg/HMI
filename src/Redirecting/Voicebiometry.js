@@ -1,26 +1,15 @@
 import React, { useEffect, useState } from "react";
 import MyComponent from "../pages/changing";
 import { Tabs, Card } from "antd";
-<<<<<<< HEAD
-import Hdev from "../assets/Hdev.png"
-=======
-import leapx from "../assets/leapx.pdf";
 import Hdev from "../assets/Hdev.png";
-import { Viewer } from "@react-pdf-viewer/core"; // Import the viewer component
->>>>>>> origin/main
 import hmi1 from "../assets/hmi1.jpg";
 import { useNavigate } from "react-router-dom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 
-<<<<<<< HEAD
-const Vsolutions = () => {
-=======
-// import Box from '@mui/material/Box';
-// import "../pages/HMI.css"
-// import { Link } from 'react-router-dom';
+
 
 const Voicebiometry = () => {
->>>>>>> origin/main
+
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState("1");
   const [contentUrl, setContentUrl] = useState("");
@@ -46,13 +35,13 @@ const Voicebiometry = () => {
         setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); 
         break;
       case "3": // If the selected tab is "CASE STUDY"
-<<<<<<< HEAD
+
         setContentUrl("https://example.com/default_case_study_url"); 
-=======
+
         setContentUrl(
           "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/VoiceBiometry-Deck2.pdf"
         ); // Set default case study URL
->>>>>>> origin/main
+
         break;
       default:
         setContentUrl("");

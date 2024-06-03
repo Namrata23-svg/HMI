@@ -1,39 +1,22 @@
 import React, { useState } from "react";
-import { PhoneOutlined, MenuOutlined } from "@ant-design/icons";
 import logo1 from "../assets/logo1.png";
 import { IconButton, InputBase } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import {
-  Button,
   Card,
-  Checkbox,
-  Form,
-  Input,
   Space,
   Typography,
-  message,
 } from "antd";
 import "../pages/Login.css";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import hmi from "../assets/hmi.png";
-import Hdev from "../assets/Hdev.png";
 import voice from "../assets/voice1.jpg";
 import Dev from "../assets/Dev.png";
-import Divider from "@mui/material/Divider";
-import ux from "../assets/ux.jpg";
-import SOFT from "../assets/SOFT.jpg";
-import automate from "../assets/automate.jpg";
-import tools from "../assets/tools.jpg";
-import leapx from "../assets/leapx.png";
 import evoco from "../assets/evoco.jpg";
-import gts from "../assets/gts.jpg";
-import crisis from "../assets/crisis.jpg";
 import "../pages/circle.css";
-import Link from "antd/es/typography/Link";
 import LanguageBar from "../pages/SearchBar";
-
+import { useTranslation } from 'react-i18next';
 const { Title, Text } = Typography;
 const HMISoftwareProducts = () => {
   const [isSearchVisible, setSearchVisible] = useState(false);
@@ -41,6 +24,8 @@ const HMISoftwareProducts = () => {
   const toggleSearch = () => {
     setSearchVisible(!isSearchVisible);
   };
+
+  const { t } = useTranslation();
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767px)" });
   const isMediumScreen = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 991px)",
@@ -130,7 +115,8 @@ const HMISoftwareProducts = () => {
         }}
       >
         {" "}
-        HMI Software Products
+       
+        {t('HMI Software Products')}
       </h1>
 
       <div
@@ -168,7 +154,7 @@ const HMISoftwareProducts = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", // Adjust fontSize based on screen size
+                  fontSize: isSmallScreen ? "16px" : "20px", 
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "15px",
                 }}
@@ -195,7 +181,7 @@ const HMISoftwareProducts = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", // Adjust fontSize based on screen size
+                  fontSize: isSmallScreen ? "16px" : "20px", 
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
@@ -221,7 +207,7 @@ const HMISoftwareProducts = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", // Adjust fontSize based on screen size
+                  fontSize: isSmallScreen ? "16px" : "20px", 
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
@@ -231,27 +217,6 @@ const HMISoftwareProducts = () => {
             </div>
           </Card>
         </div>
-
-        {/* <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', marginTop: '10px' }}>
-    <Card style={{ width: 300, cursor: "pointer" }} bodyStyle={{ padding: 0 }} hoverable onClick={() => navigate("/HMI")} className='card2-hover'>
-      <div className="custom-image">
-        <img alt="example" width="100%" src={automate} />
-      </div>
-      <div className="custom-card">
-        <h3 style={{ textAlign: "center", fontSize: "20px", paddingLeft: "30px" }}>HMI Software Development</h3>
-      </div>
-    </Card>
-
-    <Card style={{ width: 300, cursor: "pointer" }} bodyStyle={{ padding: 0 }} hoverable onClick={() => navigate("/HMI")} className='card3-hover'>
-      <div className="custom-image">
-        <img alt="example" width="100%" src={tools} />
-      </div>
-      <div className="custom-card">
-        <h3 style={{ textAlign: "center", fontSize: "20px" }}>HMI V&V</h3>
-      </div>
-    </Card>
-  </div>
-</div> */}
       </div>
     </div>
   );

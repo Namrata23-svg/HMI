@@ -9,12 +9,8 @@ import HMIT2 from "../assets/HMIT2.PNG"
 import HMIT3 from "../assets/HMIT3.PNG"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExpand, faCompress } from '@fortawesome/free-solid-svg-icons';
-
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { useMediaQuery } from 'react-responsive';
-// import Box from '@mui/material/Box';
-// import "../pages/HMI.css"
-// import { Link } from 'react-router-dom';
 
 const Leapx = () => {
   const [selectedTab, setSelectedTab] = useState("1");
@@ -40,10 +36,10 @@ const Leapx = () => {
         ); // Reset contentUrl state for other tabs
         break;
       case "2": // If the selected tab is "VIDEO"
-        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); // Set default video URL
+        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); 
         break;
       case "3": // If the selected tab is "CASE STUDY"
-        setContentUrl("https://example.com/default_case_study_url"); // Set default case study URL
+        setContentUrl("https://example.com/default_case_study_url");
         break;
       default:
         setContentUrl("");
@@ -52,32 +48,7 @@ const Leapx = () => {
   const handleCardClick = (url) => {
     setContentUrl(url);
   };
-//   const handleFullScreen = () => {
-//     const iframe = document.getElementById('myIframe');
-//   if (iframe) {
-//     if (!isFullScreen) {
-//       if (iframe.requestFullscreen) {
-//         iframe.requestFullscreen();
-//       } else if (iframe.webkitRequestFullscreen) {
-//         iframe.webkitRequestFullscreen();
-//       } else if (iframe.mozRequestFullScreen) {
-//         iframe.mozRequestFullScreen();
-//       } else if (iframe.msRequestFullscreen) {
-//         iframe.msRequestFullscreen();
-//       }
-//     } else {
-//       if (document.exitFullscreen) {
-//         document.exitFullscreen();
-//       } else if (document.webkitExitFullscreen) {
-//         document.webkitExitFullscreen();
-//       } else if (document.mozCancelFullScreen) {
-//         document.mozCancelFullScreen();
-//       } else if (document.msExitFullscreen) {
-//         document.msExitFullscreen();
-//       }
-//     }
-//   }
-// };
+
 const handleFullScreen = () => {
   const iframe = document.getElementById('myIframe');
 if (iframe) {
@@ -112,12 +83,7 @@ if (iframe) {
       label: "PRESENTATION",
       children: (
         <div style={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
-          {/* <DocViewer
-                    documents={[
-                        { uri: 'assets/leapx.pdf' } // Replace 'assets/leapx.pdf' with the path to your PDF file
-                    ]}
-                /> */}
-
+          
           <iframe
             src={contentUrl}
             width="100%"
@@ -133,12 +99,11 @@ if (iframe) {
             right: 0,
             height: '30px',
             padding: '5px 10px',
-            marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+            marginTop: isSmallScreen ? "-50px" : "-50px", 
             marginRight: isSmallScreen ? "0.5em" : "13em",
             zIndex: 999,
             display: isFullScreen ? 'none' : 'block'}} onClick={handleFullScreen}>
               <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-        {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
       </button>
           
           <div
@@ -229,7 +194,6 @@ if (iframe) {
             width="100%"
             height="569"
             src={contentUrl}
-            // https://www.youtube.com/watch?v=R_2DCYl4VaA
             frameborder="0"
             allowfullscreen
             style={{ marginLeft: isSmallScreen ? '-40px' : '0' }}
@@ -239,12 +203,11 @@ if (iframe) {
             right: 0,
             height: '30px',
             padding: '5px 10px',
-            marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+            marginTop: isSmallScreen ? "-50px" : "-50px", 
       marginRight: isSmallScreen ? "0.5em" : "13em",
             zIndex: 999,
             display: isFullScreen ? 'none' : 'block'}} onClick={handleFullScreen}>
               <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-        {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
       </button>
           
           <div
@@ -348,12 +311,11 @@ if (iframe) {
             right: 0,
             height: '30px',
             padding: '5px 10px',
-            marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+            marginTop: isSmallScreen ? "-50px" : "-50px", 
             marginRight: isSmallScreen ? "0.5em" : "13em",
             zIndex: 999,
             display: isFullScreen ? 'none' : 'block'}} onClick={handleFullScreen}>
               <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-        {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
       </button>
          
           <div
@@ -455,10 +417,6 @@ if (iframe) {
           </Tabs.TabPane>
         ))}
       </Tabs>
-      {/* <Tabs defaultActiveKey="1" items={items} onChange={onChange} 
-      
-      
-      style={{paddingLeft:"80px"}}/> */}
     </div>
   );
 };

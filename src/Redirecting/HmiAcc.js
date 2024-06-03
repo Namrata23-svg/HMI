@@ -1,23 +1,14 @@
 import React,{useState} from "react";
-import { PhoneOutlined, MenuOutlined } from "@ant-design/icons";
 import logo1 from "../assets/logo1.png";
 import { IconButton, InputBase } from '@mui/material';
-import { Search as SearchIcon } from '@mui/icons-material';
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import {
-  Button,
   Card,
-  Checkbox,
-  Form,
-  Input,
   Space,
   Typography,
-  message,
 } from "antd";
 import "../pages/Login.css";
 import { useNavigate } from "react-router-dom";
 import hmi from "../assets/hmi.png";
-import Hdev from "../assets/Hdev.png";
 import { useMediaQuery } from 'react-responsive';
 import SOFT from "../assets/SOFT.jpg";
 import leapx from "../assets/leapx.png";
@@ -139,7 +130,7 @@ const HmiAcc = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", // Adjust fontSize based on screen size
+                  fontSize: isSmallScreen ? "16px" : "20px", 
       marginTop: isSmallScreen ? "20px" : "40px",marginLeft:isSmallScreen ? "120px" : "0"
                 }}
               >
@@ -162,7 +153,7 @@ const HmiAcc = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", // Adjust fontSize based on screen size
+                  fontSize: isSmallScreen ? "16px" : "20px", 
       marginTop: isSmallScreen ? "20px" : "40px",marginLeft:isSmallScreen ? "120px" : "0"
                 }}
               >
@@ -171,27 +162,6 @@ const HmiAcc = () => {
             </div>
           </Card>
         </div>
-
-        {/* <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', marginTop: '10px' }}>
-    <Card style={{ width: 300, cursor: "pointer" }} bodyStyle={{ padding: 0 }} hoverable onClick={() => navigate("/HMI")} className='card2-hover'>
-      <div className="custom-image">
-        <img alt="example" width="100%" src={automate} />
-      </div>
-      <div className="custom-card">
-        <h3 style={{ textAlign: "center", fontSize: "20px", paddingLeft: "30px" }}>HMI Software Development</h3>
-      </div>
-    </Card>
-
-    <Card style={{ width: 300, cursor: "pointer" }} bodyStyle={{ padding: 0 }} hoverable onClick={() => navigate("/HMI")} className='card3-hover'>
-      <div className="custom-image">
-        <img alt="example" width="100%" src={tools} />
-      </div>
-      <div className="custom-card">
-        <h3 style={{ textAlign: "center", fontSize: "20px" }}>HMI V&V</h3>
-      </div>
-    </Card>
-  </div>
-</div> */}
       </div>
     </div>
   );

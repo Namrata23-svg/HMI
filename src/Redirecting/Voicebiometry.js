@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from "react";
 import MyComponent from "../pages/changing";
-import { Radio, Space } from "antd";
-import DocViewer from "react-doc-viewer";
 import { Tabs, Card } from "antd";
-import leapx from "../assets/leapx.pdf";
 import Hdev from "../assets/Hdev.png"
-import { Viewer } from "@react-pdf-viewer/core"; // Import the viewer component
 import hmi1 from "../assets/hmi1.jpg";
 import { useNavigate } from "react-router-dom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-
-// import Box from '@mui/material/Box';
-// import "../pages/HMI.css"
-// import { Link } from 'react-router-dom';
 
 const Vsolutions = () => {
   const navigate = useNavigate();
@@ -37,10 +29,10 @@ const Vsolutions = () => {
         ); // Reset contentUrl state for other tabs
         break;
       case "2": // If the selected tab is "VIDEO"
-        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); // Set default video URL
+        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); 
         break;
       case "3": // If the selected tab is "CASE STUDY"
-        setContentUrl("https://example.com/default_case_study_url"); // Set default case study URL
+        setContentUrl("https://example.com/default_case_study_url"); 
         break;
       default:
         setContentUrl("");
@@ -56,11 +48,6 @@ const Vsolutions = () => {
       label: "PRESENTATION",
       children: (
         <div style={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
-          {/* <DocViewer
-                    documents={[
-                        { uri: 'assets/leapx.pdf' } // Replace 'assets/leapx.pdf' with the path to your PDF file
-                    ]}
-                /> */}
 
           <iframe
             src={contentUrl}
@@ -152,7 +139,6 @@ const Vsolutions = () => {
             width="100%"
             height="569"
             src={contentUrl}
-            // https://www.youtube.com/watch?v=R_2DCYl4VaA
             frameborder="0"
             allowfullscreen
           ></iframe>
@@ -320,10 +306,6 @@ const Vsolutions = () => {
           </Tabs.TabPane>
         ))}
       </Tabs>
-      {/* <Tabs defaultActiveKey="1" items={items} onChange={onChange} 
-      
-      
-      style={{paddingLeft:"80px"}}/> */}
     </div>
   );
 };

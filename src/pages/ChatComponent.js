@@ -1,9 +1,6 @@
 // ChatComponent.js
 
 import React, { useState } from "react";
-import axios from "axios";
-
-
 import styled from "styled-components";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -51,7 +48,7 @@ const ChatContainer = styled.div`
 `;
 const GradientText = styled.div`
   font-size: 1.1em;
-  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(88,9,121,1) 35%, rgba(0,212,255,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
@@ -87,8 +84,8 @@ const InputContainer = styled.div`
   }
 
   button {
-    background-color: #007bff;
-    color:000066;
+    background-color:#000000;
+    color:#FFFFFF;
     padding: 5px 7px;
     border: none;
     border-radius:50px / 40px;

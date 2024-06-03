@@ -1,5 +1,6 @@
 // src/translations.js
-import React, { useState, useEffect } from "react";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 const translations = {
     en: {
         search: "Search...",
@@ -30,5 +31,17 @@ const translations = {
         CASESTUDY: "FALLSTUDIE"
       }
     };
+
+    
+i18n
+.use(initReactI18next)
+.init({
+  translations,
+  lng: 'en', 
+  fallbackLng: 'en', 
+  interpolation: {
+    escapeValue: false 
+  }
+});
     
     export default translations;

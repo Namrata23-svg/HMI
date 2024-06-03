@@ -1,28 +1,18 @@
 import React, { useEffect, useState } from "react";
 import MyComponent from "./changing";
-import { Radio, Space } from "antd";
-import DocViewer from "react-doc-viewer";
 import { Tabs, Card } from "antd";
 import hmippt from "../assets/hmippt.jpg"
 import HMIT from "../assets/HMIT.PNG"
 import cockpit from "../assets/cockpit.jpg"
-import leapx from "../assets/leapx.pdf";
-import Hdev from "../assets/Hdev.png"
 import Hoverview from "../assets/Hoverview.png"
-import gts from "../assets/gts.jpg"
 import Dev from "../assets/Dev.png"
-import { Viewer } from "@react-pdf-viewer/core"; // Import the viewer component
 import hmi1 from "../assets/hmi1.jpg";
 import { useNavigate } from "react-router-dom";
-import Iframe from 'react-iframe'
 import { useMediaQuery } from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExpand, faCompress } from '@fortawesome/free-solid-svg-icons';
 import "@react-pdf-viewer/core/lib/styles/index.css";
 
-// import Box from '@mui/material/Box';
-// import "../pages/HMI.css"
-// import { Link } from 'react-router-dom';
 
 const HMI = () => {
   const navigate = useNavigate();
@@ -36,7 +26,7 @@ const HMI = () => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
 
   useEffect(() => {
-    // Set the default content URL for the selected tab
+   
     setContentUrl(
       "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMI_CoE_Overview_2023_For_PRM_V2.pdf"
     );
@@ -102,11 +92,9 @@ const HMI = () => {
            
             title="HMI-PPT"
             src={contentUrl}
-            width={isSmallScreen ? '100%' : '100%'} // Adjust width based on screen size
+            width={isSmallScreen ? '100%' : '100%'} 
             height={isSmallScreen ? '300px' : '569px'}
-          
-            // width={isSmallScreen ? '100%' : '100%'}
-            // height={isSmallScreen ? '100%' : '569px'}
+        
             marginLeft={ isSmallScreen ? '20px' : '50px'}
             frameborder="0"
           
@@ -126,12 +114,12 @@ const HMI = () => {
             right: 0,
             height: '30px',
             padding: '5px 10px',
-            marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+            marginTop: isSmallScreen ? "-50px" : "-50px", 
       marginRight: isSmallScreen ? "0.5em" : "13em",
             zIndex: 999,
             display: isFullScreen ? 'none' : 'block'}} onClick={handleFullScreen}>
               <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-        {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
+        
       </button>
           
           <div
@@ -223,7 +211,6 @@ const HMI = () => {
             width="100%"
             height={isSmallScreen ? '300px' : '569px'}
             src={contentUrl}
-            // https://www.youtube.com/watch?v=R_2DCYl4VaA
             frameborder="0"
             allowfullscreen
             style={{ marginLeft: isSmallScreen ? '-40px' : '0' }} 
@@ -233,7 +220,7 @@ const HMI = () => {
             right: 0,
             height: '30px',
             padding: '5px 10px',
-            marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+            marginTop: isSmallScreen ? "-50px" : "-50px", 
             marginRight: isSmallScreen ? "0.5em" : "13em",
             zIndex: 999,
             display: isFullScreen ? 'none' : 'block'}} onClick={handleFullScreen}>
@@ -340,7 +327,7 @@ const HMI = () => {
             right: 0,
             height: '30px',
             padding: '5px 10px',
-            marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+            marginTop: isSmallScreen ? "-50px" : "-50px", 
             marginRight: isSmallScreen ? "0.5em" : "13em",
             zIndex: 999,
             display: isFullScreen ? 'none' : 'block'}} onClick={handleFullScreen}>
@@ -442,10 +429,7 @@ const HMI = () => {
           </Tabs.TabPane>
         ))}
       </Tabs>
-      {/* <Tabs defaultActiveKey="1" items={items} onChange={onChange} 
       
-      
-      style={{paddingLeft:"80px"}}/> */}
     </div>
   );
 };

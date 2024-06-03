@@ -1,19 +1,12 @@
 import React  ,{useState}from "react";
 import hmi from "../assets/hmi.png";
-import ux from "../assets/ux.jpg";
-import { PhoneOutlined, MenuOutlined } from "@ant-design/icons";
 import logo1 from "../assets/logo1.png";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Card, Checkbox, Form, Input, Space, Typography } from "antd";
+import {  Card,  Space, Typography } from "antd";
 import "../pages/chnaging.css";
-import Link from "antd/es/typography/Link";
 import { IconButton, InputBase } from '@mui/material';
-import Hdev from "../assets/Hdev.png"
-import { Search as SearchIcon } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
 import Hoverview from "../assets/Hoverview.png";
 import { useMediaQuery } from 'react-responsive';
-import SearchBar from "./SearchBar";
 import LanguageBar from "./SearchBar";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 const { Title, Text } = Typography;
@@ -32,10 +25,7 @@ const SearchPage = () => {
   };
   
   const handleSearchSubmit = () => {
-    // Check if the query is 'ui/ux' and search field is visible
     if (query === 'ui/ux'   && isSearchVisible) {
-      // Perform any additional actions you need, such as showing the UI/UX card
-      // For now, let's just console log
       console.log("Showing UI/UX card");
     }
   };
@@ -76,10 +66,6 @@ const SearchPage = () => {
     <IconButton onClick={toggleSearch}>
       <SearchOutlinedIcon />
     </IconButton>
-  
-  
-         
-      
      </div>
      <div style={{ display: "flex", alignItems: "center",flexWrap:"wrap" }}>
               <img
@@ -95,24 +81,6 @@ const SearchPage = () => {
         </div>
       </div>
     
-
-        
-            {/* <div style={{ display: "flex", alignItems: "center" }}>
-              <img
-                src={hmi}
-                style={{
-                  height: "55px",
-                  width: "65px",
-                  marginTop: "-15px",
-                  marginRight: "50px",
-                  cursor: "pointer",
-                }}
-                onClick={() => navigate("/Home")}
-              />
-            </div>
-          </Space>
-        </div>{" "}
-      </div> */}
       {query === 'ui/ux'  && isSearchVisible &&  (
         <Card
           title="UI/UX Card"
@@ -130,14 +98,8 @@ const SearchPage = () => {
             <h3 style={{ textAlign: "center", fontSize: "20px", marginTop: "40px" }}>UI/UX</h3>
           </div>
         </Card>
-
-
-           
-     
       )}
       
-
-     
     </div>
 
   );

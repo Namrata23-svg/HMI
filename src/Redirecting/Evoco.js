@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from "react";
 import MyComponent from "../pages/changing";
-import { Radio, Space } from "antd";
-import DocViewer from "react-doc-viewer";
 import { Tabs, Card } from "antd";
-import leapx from "../assets/leapx.pdf";
-import { Viewer } from "@react-pdf-viewer/core"; // Import the viewer component
 import hmi1 from "../assets/hmi1.jpg";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExpand, faCompress } from "@fortawesome/free-solid-svg-icons";
-// import Box from '@mui/material/Box';
-// import "../pages/HMI.css"
-// import { Link } from 'react-router-dom';
-
 const Evoco = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState("1");
@@ -38,10 +30,10 @@ const Evoco = () => {
         ); // Reset contentUrl state for other tabs
         break;
       case "2": // If the selected tab is "VIDEO"
-        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); // Set default video URL
+        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); 
         break;
       case "3": // If the selected tab is "CASE STUDY"
-        setContentUrl("https://example.com/default_case_study_url"); // Set default case study URL
+        setContentUrl("https://example.com/default_case_study_url"); 
         break;
       default:
         setContentUrl("");
@@ -84,19 +76,11 @@ const Evoco = () => {
       label: "PRESENTATION",
       children: (
         <div style={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
-          {/* <DocViewer
-                    documents={[
-                        { uri: 'assets/leapx.pdf' } // Replace 'assets/leapx.pdf' with the path to your PDF file
-                    ]}
-                /> */}
 
           <iframe
             src={contentUrl}
             width={"100%"}
             height={"569px"}
-            // width={isSmallScreen ? '100%' : '100%'}
-            // height={isSmallScreen ? '100%' : '569px'}
-            // marginLeft={ isSmallScreen ? '20px' : '50px'}
             frameborder="0"
             allowFullScreen="true"
             mozallowfullscreen="true"
@@ -111,7 +95,7 @@ const Evoco = () => {
               right: 0,
               height: "30px",
               padding: "5px 10px",
-              marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+              marginTop: isSmallScreen ? "-50px" : "-50px", 
               marginRight: isSmallScreen ? "0.5em" : "13em",
               zIndex: 999,
               display: isFullScreen ? "none" : "block",
@@ -119,7 +103,6 @@ const Evoco = () => {
             onClick={handleFullScreen}
           >
             <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-            {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
           </button>
 
           <div
@@ -231,7 +214,6 @@ const Evoco = () => {
             width="100%"
             height="569"
             src={contentUrl}
-            // https://www.youtube.com/watch?v=R_2DCYl4VaA
             frameborder="0"
             allowfullscreen
             style={{ marginLeft: isSmallScreen ? "-40px" : "0" }}
@@ -243,7 +225,7 @@ const Evoco = () => {
               right: 0,
               height: "30px",
               padding: "5px 10px",
-              marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+              marginTop: isSmallScreen ? "-50px" : "-50px", 
               marginRight: isSmallScreen ? "0.5em" : "13em",
               zIndex: 999,
               display: isFullScreen ? "none" : "block",
@@ -251,7 +233,6 @@ const Evoco = () => {
             onClick={handleFullScreen}
           >
             <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-            {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
           </button>
           <div
             style={{
@@ -362,7 +343,7 @@ const Evoco = () => {
               right: 0,
               height: "30px",
               padding: "5px 10px",
-              marginTop: isSmallScreen ? "-50px" : "-50px", // Adjust marginTop based on screen size
+              marginTop: isSmallScreen ? "-50px" : "-50px", 
               marginRight: isSmallScreen ? "0.5em" : "13em",
               zIndex: 999,
               display: isFullScreen ? "none" : "block",
@@ -370,7 +351,6 @@ const Evoco = () => {
             onClick={handleFullScreen}
           >
             <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand} />
-            {/* {isFullScreen ? 'Exit Fullscreen' : 'Fullscreen'} */}
           </button>
 
           <div
@@ -478,10 +458,6 @@ const Evoco = () => {
           </Tabs.TabPane>
         ))}
       </Tabs>
-      {/* <Tabs defaultActiveKey="1" items={items} onChange={onChange} 
-      
-      
-      style={{paddingLeft:"80px"}}/> */}
     </div>
   );
 };

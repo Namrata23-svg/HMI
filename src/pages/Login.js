@@ -3,18 +3,11 @@ import hmi from "../assets/hmi.png";
 import { IconButton, InputBase } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
 import HomeScreen from "../assets/HMIANALYTICS.jpg";
-
-// import { Button, Descriptions ,PageHeader } from 'antd';
-// import PageHeader from "antd"
-// import  Icon  from "antd";
-
-//  import { Card, Typography, Space  } from 'antd';
 import logo1 from "../assets/logo1.png";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import {
   Button,
   Card,
-  Checkbox,
   Form,
   Input,
   Space,
@@ -23,11 +16,8 @@ import {
 } from "antd";
 import "../pages/Login.css";
 import { useNavigate } from "react-router-dom";
-import log from "../assets/log.jpg";
-import Home from "./Home";
 import { useMediaQuery } from "react-responsive";
 import Link from "antd/es/typography/Link";
-import SearchBar from "./SearchBar";
 import LanguageBar from "./SearchBar";
 
 const { Title, Text } = Typography;
@@ -47,11 +37,9 @@ const Login = () => {
     console.log("Received values of form: ", values);
 
     if (values.username === "hmicoe" && values.password === "hmicoe") {
-      // If correct, navigate to the desired page
       message.success("Login successful");
       navigate("/Home");
     } else {
-      // If incorrect, show an error message (you can handle this part as needed)
       message.error("Incorrect username or password");
     }
   };
@@ -129,12 +117,6 @@ const Login = () => {
           </Space>
         </div>{" "}
       </div>
-
-      {/* <div>
-        <h1 style={{textAlign:"center",marginTop:"2%"}}>Welcome to HMI CoE</h1>
-    </div> */}
-
-      {/* Card content goes here */}
 
       <div className="login-container">
         <Card

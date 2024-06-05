@@ -16,21 +16,17 @@ import Voicebiometry from "./Redirecting/Voicebiometry";
 import Solutions from "./Redirecting/V&v";
 
 function App() {
-  
   return (
     <>
-   
-    
       <Router>
         <Routes>
-
           <Route path="/MyComponent" element={<MyComponent />} />
           <Route path="/HMI" element={<HMI />} />
           <Route path="/login" element={<Login />} />
           <Route path="/leapx" element={<LeapX />} />
           <Route path="/HmiAcc" element={<HmiAcc />} />
           <Route path="/SearchPage" element={<SearchPage />} />
-          <Route path="/Voicebiometry" element={<Voicebiometry />} />
+          <Route path="/voicebiometry" element={<Voicebiometry />} />
           <Route path="/V&V" element={<Solutions />} />
           <Route path="/evoco" element={<Evoco />} />
           <Route
@@ -45,7 +41,6 @@ function App() {
           <Route path="/" element={<Login />} />
         </Routes>
       </Router>
-      
     </>
   );
 }

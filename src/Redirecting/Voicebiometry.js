@@ -6,10 +6,7 @@ import hmi1 from "../assets/hmi1.jpg";
 import { useNavigate } from "react-router-dom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 
-
-
 const Voicebiometry = () => {
-
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState("1");
   const [contentUrl, setContentUrl] = useState("");
@@ -17,7 +14,7 @@ const Voicebiometry = () => {
   useEffect(() => {
     // Set the default content URL for the selected tab
     setContentUrl(
-      "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/HMI_CoE_Test_Management_Solution_Overview_V1.0.pdf"
+      "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/VoiceBiometry-Deck2.pdf"
     );
   }, []);
   const onChange = (key) => {
@@ -32,11 +29,10 @@ const Voicebiometry = () => {
         ); // Reset contentUrl state for other tabs
         break;
       case "2": // If the selected tab is "VIDEO"
-        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA"); 
+        setContentUrl("https://www.youtube.com/embed/R_2DCYl4VaA");
         break;
       case "3": // If the selected tab is "CASE STUDY"
-
-        setContentUrl("https://example.com/default_case_study_url"); 
+        setContentUrl("https://example.com/default_case_study_url");
 
         setContentUrl(
           "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/VoiceBiometry-Deck2.pdf"
@@ -57,7 +53,6 @@ const Voicebiometry = () => {
       label: "PRESENTATION",
       children: (
         <div style={{ display: "flex", width: "100%", margin: 0, padding: 0 }}>
-
           <iframe
             src={contentUrl}
             width="100%"
@@ -77,7 +72,7 @@ const Voicebiometry = () => {
             }}
           >
             <p style={{ marginLeft: "1em" }}>
-              <b>Video</b>
+              <b>Voice Biometry</b>
             </p>
             <Card
               style={{
@@ -93,12 +88,12 @@ const Voicebiometry = () => {
               }}
               onClick={() =>
                 handleCardClick(
-                  "https://www.sharedfilespro.com/download-sample-pdf/"
+                  "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/VoiceBiometry-Deck2.pdf"
                 )
               }
             ></Card>
             <p style={{ marginLeft: "1em" }}>
-              <b>Video</b>
+              <b>Presentation</b>
             </p>
             <Card
               style={{
@@ -113,7 +108,7 @@ const Voicebiometry = () => {
               }}
               onClick={() =>
                 handleCardClick(
-                  "https://file-examples.com/index.php/sample-documents-download/sample-pdf-download/"
+                  "https://hmi-dashboard.s3.ap-northeast-3.amazonaws.com/VoiceBiometry-Deck2.pdf"
                 )
               }
             >

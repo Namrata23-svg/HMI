@@ -10,11 +10,14 @@ import Dev from "../assets/Dev.png";
 import Maya from "../assets/Maya.png";
 import "../pages/circle.css";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const { Title, Text } = Typography;
 
 const Homepage = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
+  const { t, i18n } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767px)" });
   const isMediumScreen = useMediaQuery({
@@ -29,7 +32,6 @@ const Homepage = () => {
 
   return (
     <div className="circle-card">
-      
       <h1
         style={{
           paddingLeft: "2%",
@@ -40,9 +42,8 @@ const Homepage = () => {
         }}
       >
         {" "}
-        HMI Centre of Excellence (CoE)
+        {t("HMICentreOfExcellenceCoE")}
       </h1>
-
 
       <div
         style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
@@ -76,12 +77,12 @@ const Homepage = () => {
               <h3
                 style={{
                   textAlign: isSmallScreen ? "center" : "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
               >
-                HMI Overview
+                {t("HMI Overview")}
               </h3>
             </div>
           </Card>
@@ -104,14 +105,13 @@ const Homepage = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
               >
-                UX/UI
+                {t("UX/UI")}
               </h3>
-          
             </div>
           </Card>
 
@@ -133,14 +133,13 @@ const Homepage = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
-                  marginLeft: isSmallScreen ? "120px" : "0",
+                  marginLeft: isSmallScreen ? "120px" : "10px",
                 }}
               >
-                HMI Software Development
+                {t("HMI Software Development")}
               </h3>
-             
             </div>
           </Card>
         </div>
@@ -174,14 +173,13 @@ const Homepage = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
               >
-                HMI V&V Solutions
+                {t("HMI V&V Solutions")}
               </h3>
-            
             </div>
           </Card>
 
@@ -202,12 +200,12 @@ const Homepage = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
               >
-                HMI Accelarators
+                {t("HMI Accelarators")}
               </h3>
             </div>
           </Card>
@@ -229,13 +227,13 @@ const Homepage = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                   paddingLeft: "30px",
                 }}
               >
-                HMI Software Products
+                {t("HMI Software Products")}
               </h3>
             </div>
           </Card>

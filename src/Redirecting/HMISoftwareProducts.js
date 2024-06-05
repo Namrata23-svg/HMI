@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import logo1 from "../assets/logo1.png";
 import { IconButton, InputBase } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
-import {
-  Card,
-  Space,
-  Typography,
-} from "antd";
+import { Card, Space, Typography } from "antd";
 import "../pages/Login.css";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
@@ -16,7 +12,8 @@ import Dev from "../assets/Dev.png";
 import evoco from "../assets/evoco.jpg";
 import "../pages/circle.css";
 import LanguageBar from "../pages/SearchBar";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { Suspense } from "react";
 const { Title, Text } = Typography;
 const HMISoftwareProducts = () => {
   const [isSearchVisible, setSearchVisible] = useState(false);
@@ -115,8 +112,7 @@ const HMISoftwareProducts = () => {
         }}
       >
         {" "}
-       
-        {t('HMI Software Products')}
+        {t("HMI Software Products")}
       </h1>
 
       <div
@@ -144,7 +140,7 @@ const HMISoftwareProducts = () => {
             }}
             bodyStyle={{ padding: 0 }}
             hoverable
-            onClick={() => navigate("/Voicebiometry")}
+            onClick={() => navigate("/voicebiometry")}
             className="card-hover"
           >
             <div className="custom-image">
@@ -154,12 +150,12 @@ const HMISoftwareProducts = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "15px",
                 }}
               >
-                Voice Biometry
+                {t("Voice Biometry")}
               </h3>
             </div>
           </Card>
@@ -181,12 +177,12 @@ const HMISoftwareProducts = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
               >
-                HMI Analytics
+                {t("HMI Analytics")}
               </h3>
             </div>
           </Card>
@@ -207,7 +203,7 @@ const HMISoftwareProducts = () => {
               <h3
                 style={{
                   textAlign: "center",
-                  fontSize: isSmallScreen ? "16px" : "20px", 
+                  fontSize: isSmallScreen ? "16px" : "20px",
                   marginTop: isSmallScreen ? "20px" : "40px",
                   marginLeft: isSmallScreen ? "120px" : "0",
                 }}
@@ -222,4 +218,10 @@ const HMISoftwareProducts = () => {
   );
 };
 
-export default HMISoftwareProducts;
+export default function WrappedApp() {
+  return (
+    <Suspense fallback="...loading">
+      <HMISoftwareProducts />
+    </Suspense>
+  );
+}

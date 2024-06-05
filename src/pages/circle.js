@@ -11,8 +11,11 @@ import Maya from "../assets/Maya.png";
 import "../pages/circle.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import dictionary from "./languages.js";
+import { I18n } from "aws-amplify/utils";
 
-const { Title, Text } = Typography;
+I18n.putVocabularies(dictionary);
+// I18n.setLanguage("en");
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -42,7 +45,7 @@ const Homepage = () => {
         }}
       >
         {" "}
-        {t("HMICentreOfExcellenceCoE")}
+        {I18n.get("HMICentreOfExcellenceCoE")}
       </h1>
 
       <div

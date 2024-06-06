@@ -21,8 +21,8 @@ const LanguageBar = () => {
           autoWidth
           defaultValue="de"
         >
-          <MenuItem value="en">English</MenuItem>
           <MenuItem value="de">German</MenuItem>
+          <MenuItem value="en">English</MenuItem>
         </Select>
         <IconButton></IconButton>
       </div>
